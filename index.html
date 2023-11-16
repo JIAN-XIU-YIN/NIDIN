@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keyword" content="你訂NIDIN,你訂怎麼能少了我,NIDIN">
+    <title>你訂NIDIN</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/gly.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="icon" href="images/logo.png">
+  </head>
+<!--==================================================================================	  -->	
+<body id="page1">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-light fixed-top">
+      <a class="navbar-brand" href="#"><img src="images/logo2.png" alt="" class="logo2"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#page2">前言楔子</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="#page3">品牌介紹</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="#page4">商品訂購</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link" href="#page5">服務中心</a>
+          </li>
+        </ul>
+		  
+		  <span class="linkr">
+		  <a href="javascript://" onClick="window.open('index.html','_blank','top=100,left=200,width=400,height=700')" class="phone">
+			  <span class="glyphicon glyphicon-phone"></span>手機版</a>
+		  </span>&nbsp;|&nbsp;
+		  
+		  <span class="linkr c" id="si" data-toggle="modal" data-target="#sibox">
+			  <span class="glyphicon glyphicon-user"></span>會員登入
+		  </span>&nbsp;|&nbsp;
+		  
+		  <span class="linkr c" id="si2">
+			  <a href="#page4" class="phone">
+			  <span class="glyphicon glyphicon-shopping-cart"></span>購物車(<span id="topcar" class="fred fw">0</span>)</a>
+		  </span>&nbsp;|&nbsp;
+		  
+		  <span class="linkr c" id="si3">
+			  <span class="glyphicon glyphicon-comment"></span>客服機器人
+		  </span>&nbsp;&nbsp;
+		  
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="搜尋" aria-label="Search" list="list">
+          	<datalist id="list">
+				<option value="你訂NIDIN"></option>
+				<option value="NIDIN"></option>
+				<option value="你訂怎麼能少了我"></option>
+			</datalist>
+			<span class="glyphicon glyphicon-search c" data-toggle="modal" data-target="#sebox"></span>
+        </form>
+      </div>
+    </nav>
+	  
+	  <div class="modal fade" tabindex="-1" id="sebox">
+	  	<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1>您處於無網路狀態</h1>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+		    </div>
+			  
+			  <div class="modal-body">
+				  Wi-Fi和行動網路已關閉<br>
+				  您可以在連上網路後載入這個網站
+			  </div>
+			  
+			  <div class="modal-footer">
+			  <button type="button" class="btn btn-dark" data-dismiss="modal">關閉</button>
+			  </div>
+		  </div>
+	    </div>
+	  </div>
+	  
+	  <div class="modal fade" tabindex="-1" id="sibox">
+	  	<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1>會員登入</h1>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+		    </div>
+			  
+			  <div class="modal-body">
+				  <span>帳號:</span>
+				  <input type="text" class="form-control">
+				  <span>密碼:</span>
+				  <input type="password" class="form-control">
+			  </div>
+			  
+			  <div class="modal-footer">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal" id="user-si">登入</button>
+			  <button type="button" class="btn btn-dark" data-dismiss="modal">關閉</button>
+			  </div>
+		  </div>
+	    </div>
+	  </div>
+	  
+	  <div class="robot" title="客服機器人"></div>
+	  <a href="#page1" id="top"><img src="images/top.png" alt="" class="top" title="回到頂部"></a>
+	  <div class="mess">
+	  	<div class="mess-tit ffff alignc">客服機器人</div>
+		  <ul class="mess-con" id="rsayto">
+		  	<li>
+			  <div class="mess-ava"><img src="images/robot.png" alt=""></div>
+				<div class="mess-text">您好，我是你訂機器人，您可以留下有關你訂的問題或意見，稍後會由專人為您服務。
+					<form action="javascript:void(0);" id="form2">
+						姓名: <input type="text" id="cname0" name="cname" required="required"><br>
+						信箱: <input type="email" id="cemail0" name="cemail" required="required"><br>
+						留言: <textarea name="ctext" id="ctext0"></textarea>
+						<button id="btn_form" onClick="javascript:Cookie('0');">送出</button>
+						<button type="reset">重設</button>
+					</form>
+				</div>
+		    </li>
+		  </ul>
+		  <input type="text" id="rsay" size="35" placeholder="請輸入文字" onKeyDown="keyin(event)">
+</div>	 
+<!--==================================================================================	  -->
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-pause="false" data-interval="2500">
+			  <div class="mask"></div>
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+              <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="images/bg1.jpg" alt="First slide">                
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/bg2.jpg" alt="Second slide">                
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/bg3.jpg" alt="Third slide">                
+              </div>
+            </div>
+            <a class="carousel-control-prev maskt" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next maskt" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+          </div>
+<!--==================================================================================	  -->
+    <section id="page2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-12 alignc">
+		    <div class="title">
+			  	<div class="title-c">前言楔子</div>
+			  <div class="title-e">PREFACE</div>
+				<a href="http://www.line.com" data-toggle="modal" data-target="#sebox" class="td"><h5 class="fdark fw">專人：LINE ID-@250zzgdi</h5></a>
+				<h6 class="fdark fw"><img src="images/robot0.png" alt="" class="robots">網站上的客服機器人能即時回覆您的訊息，<br>您可以留下有關你訂的問題或意見，稍後會由專人為您服務。</h6>
+		    </div>
+			  
+		    <div id="accordion1" role="tablist">
+		      <div class="card">
+		        <div class="card-header c" role="tab" id="headingOne1" data-toggle="collapse" href="#collapseOne1">
+		          <h5 class="mb-0 am"> <a role="button" aria-expanded="true" aria-controls="collapseOne1"> 官方客服 </a> </h5>
+	            </div>
+		        <div id="collapseOne1" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordion1">
+		          <div class="card-body"><img src="images/c1.JPG" alt="" class="c1234"></div>
+	            </div>
+	          </div>
+		      <div class="card">
+		        <div class="card-header c" role="tab" id="headingTwo1" data-toggle="collapse" href="#collapseTwo1">
+		          <h5 class="mb-0 am"> <a class="collapsed" role="button" aria-expanded="false" aria-controls="collapseTwo1"> 我是團長 </a> </h5>
+	            </div>
+		        <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1" data-parent="#accordion1">
+		          <div class="card-body"><img src="images/c2.JPG" alt="" class="c1234"></div>
+	            </div>
+	          </div>
+		      <div class="card">
+		        <div class="card-header c" role="tab" id="headingThree1" data-toggle="collapse" href="#collapseThree1">
+		          <h5 class="mb-0 am"> <a class="collapsed" role="button" aria-expanded="false" aria-controls="collapseThree1"> 我是團員 </a> </h5>
+	            </div>
+		        <div id="collapseThree1" class="collapse" role="tabpanel" aria-labelledby="headingThree1" data-parent="#accordion1">
+		          <div class="card-body"><img src="images/c3.JPG" alt="" class="c1234"></div>
+	            </div>
+	          </div>
+				<div class="card">
+		        <div class="card-header c" role="tab" id="headingFour1" data-toggle="collapse" href="#collapseFour1">
+		          <h5 class="mb-0 am"> <a class="collapsed" role="button" aria-expanded="false" aria-controls="collapseFour1"> 我想訂餐 </a> </h5>
+	            </div>
+		        <div id="collapseFour1" class="collapse" role="tabpanel" aria-labelledby="headingFour1" data-parent="#accordion1">
+		          <div class="card-body"><img src="images/c4.png" alt="" class="c1234"></div>
+	            </div>
+	          </div>
+	        </div>			  
+          </div>
+			
+			
+			<div class="col-lg-5 col-md-6 col-12 alignc">
+			  <img src="images/logo3.png" alt="" class="logo3">
+				<hr>
+			  <video controls src="images/v.mp4" class="v"></video>				
+          </div>
+        </div>
+		  
+        <div class="row alignc gly">
+          <div class="col-lg-3 col-md-6 col-12 box">	
+			  <span class="glyphicon glyphicon-ok-circle f80 fred"></span>
+			  <hr>
+			  <h4 class="fred fw">揪團超方便</h4>
+			  <h5 class="fdark fw">你訂我訂,揪團一個連結搞定</h5>
+          </div>
+			<div class="col-lg-3 col-md-6 col-12 box">	
+			  <span class="glyphicon glyphicon-share-alt f80 fred"></span>
+			  <hr>
+			  <h4 class="fred fw">分享優惠券</h4>
+			  <h5 class="fdark fw">獨樂樂不如眾樂樂,優惠分享好歡樂</h5>
+          </div>
+			<div class="col-lg-3 col-md-6 col-12 box">	
+			  <span class="glyphicon glyphicon-list f80 fred"></span>
+			  <hr>
+			  <h4 class="fred fw">收款不混淆</h4>
+			  <h5 class="fdark fw">收款不混淆,團長記錄好明確</h5>
+          </div>
+		  <div class="col-lg-3 col-md-6 col-12 box">	
+		    <span class="glyphicon glyphicon-tags f80 fred"></span>
+			  <hr>
+			  <h4 class="fred fw">專屬姓名貼</h4>
+			  <h5 class="fdark fw">你訂好貼心,訂製屬於你的名字</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+<!--==================================================================================	  -->
+	<section id="page3" class="alignc">
+    <div class="container">
+		<div class="title">
+			  	<div class="title-c">品牌介紹</div>
+				  <div class="title-e">INTRO</div>
+	  </div>
+          <div class="row">
+            <div class="col-lg-4 col-12">
+              <div class="card">
+                <img class="card-img-top" src="images/a1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title fred fw">春陽茶事 4.9<span class="glyphicon glyphicon-star f50"></span>(269)</h3>
+					<hr>
+                  <p class="card-text alignl">「春」happiness/love每口茶都讓人感到幸福<br>「陽」warm親切服務使人倍感溫暖<br>「茶」tea推廣台灣烏龍茶外銷全世界<br>「事」life讓喝茶成為生活中最重要的事</p>
+                  <a href="#page3" class="btn btn-outline-danger" data-toggle="modal" data-target="#a1">More</a>
+                </div>
+              </div>
+            </div>
+			  <div class="col-lg-4 col-12">
+              <div class="card">
+                <img class="card-img-top" src="images/a2.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title fred fw">早安美芝城 4.9<span class="glyphicon glyphicon-star f50"></span>(46)</h3>
+					<hr>
+                  <p class="card-text alignl">早安美芝城以「好朋友家的廚房,媽媽放心的早餐店」一個溫馨的概念，貼近您的生活，堅持提供「熟悉、 舒適、健康、活力、安心」的食材與用餐環境，打造一個在鄰里之間維繫感情的早餐。</p>
+                  <a href="#page3" class="btn btn-outline-danger" data-toggle="modal" data-target="#a2">More</a>
+                </div>
+              </div>
+            </div>
+			  <div class="col-lg-4 col-12">
+              <div class="card">
+                <img class="card-img-top" src="images/a3.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title fred fw">漫漫點 4.9<span class="glyphicon glyphicon-star f50"></span>(149)</h3>
+					<hr>
+                  <p class="card-text alignl">漫漫點， 是，分享喜愛茶飲的心意； 有，分享台灣烏龍茶藝的念頭； 希望，您在品嚐一杯漫漫點的茶飲時， 感到一時半刻的恬靜； 有同好相隨， 漫漫點，將不斷追求著茶飲極致和創新。</p>
+                  <a href="#page3" class="btn btn-outline-danger" data-toggle="modal" data-target="#a3">More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+	</section>		
+	  
+	  <div class="modal fade" tabindex="-1" id="a1">
+	  	<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1>春陽茶事 4.9(269)</h1>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+		    </div>
+			  
+			  <div class="modal-body">
+				  <div class="modal-img alignc"><img src="images/a1.jpg" alt=""></div><br>
+				  「春」happiness/love每口茶都讓人感到幸福<br>「陽」warm親切服務使人倍感溫暖<br>「茶」tea推廣台灣烏龍茶外銷全世界<br>「事」life讓喝茶成為生活中最重要的事<br><br>
+				  <h6 class="fdark fw">
+				      喜歡這個店家的話不妨動動您的指尖! <span class="glyphicon glyphicon-hand-up"></span><br>
+					  分享出去讓身邊的親朋好友們知道吧! <span class="glyphicon glyphicon-heart"></span><br>
+				  </h6>
+				  <br>
+				  <span class="fred fw">#你訂NIDIN #春陽茶事 #詳細內容可至粉絲專頁</span>
+			  </div>
+			  
+			  <div class="modal-footer">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#a">分享</button>
+			  <button type="button" class="btn btn-dark" data-dismiss="modal">關閉</button>
+			  </div>
+		  </div>
+	    </div>
+	  </div>
+	  
+	  <div class="modal fade" tabindex="-1" id="a2">
+	  	<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1>早安美芝城 4.9(46)</h1>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+		    </div>
+			  
+			  <div class="modal-body">
+				  <div class="modal-img alignc"><img src="images/a2.jpg" alt=""></div><br>
+				  早安美芝城以「好朋友家的廚房,媽媽放心的早餐店」一個溫馨的概念，貼近您的生活，堅持提供「熟悉、 舒適、健康、活力、安心」的食材與用餐環境，打造一個在鄰里之間維繫感情的早餐。<br><br>
+				  <h6 class="fdark fw">
+				      喜歡這個店家的話不妨動動您的指尖! <span class="glyphicon glyphicon-hand-up"></span><br>
+					  分享出去讓身邊的親朋好友們知道吧! <span class="glyphicon glyphicon-heart"></span><br>
+				  </h6>
+				  <br>
+				  <span class="fred fw">#你訂NIDIN #早安美芝城 #詳細內容可至粉絲專頁</span>
+			  </div>
+			  
+			  <div class="modal-footer">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#a">分享</button>
+			  <button type="button" class="btn btn-dark" data-dismiss="modal">關閉</button>
+			  </div>
+		  </div>
+	    </div>
+	  </div>
+	  
+	  <div class="modal fade" tabindex="-1" id="a3">
+	  	<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1>漫漫點 4.9(149)</h1>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+		    </div>
+			  
+			  <div class="modal-body">
+				  <div class="modal-img alignc"><img src="images/a3.jpg" alt=""></div><br>
+				  漫漫點， 是，分享喜愛茶飲的心意； 有，分享台灣烏龍茶藝的念頭； 希望，您在品嚐一杯漫漫點的茶飲時， 感到一時半刻的恬靜； 有同好相隨， 漫漫點，將不斷追求著茶飲極致和創新。<br><br>
+				  <h6 class="fdark fw">
+				      喜歡這個店家的話不妨動動您的指尖! <span class="glyphicon glyphicon-hand-up"></span><br>
+					  分享出去讓身邊的親朋好友們知道吧! <span class="glyphicon glyphicon-heart"></span><br>
+				  </h6>
+				  <br>
+				  <span class="fred fw">#你訂NIDIN #漫漫點 #詳細內容可至粉絲專頁</span>
+			  </div>
+			  
+			  <div class="modal-footer">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#a">分享</button>
+			  <button type="button" class="btn btn-dark" data-dismiss="modal">關閉</button>
+			  </div>
+		  </div>
+	    </div>
+	  </div>
+	  
+	  <div class="modal fade" tabindex="-1" id="a">
+	  	<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1><span class="glyphicon glyphicon-check"></span>已分享</h1>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+		    </div>
+			  
+			  <div class="modal-footer">
+			  <button type="button" class="btn btn-dark" data-dismiss="modal">關閉</button>
+			  </div>
+		  </div>
+	    </div>
+	  </div>
+<!--==================================================================================	  -->
+	<section id="page4" class="alignc">
+      <div class="container">
+			  <div class="title">
+			  	<div class="title-c">商品訂購</div>
+				  <div class="title-e">ORDER</div>
+			  </div>
+		  
+		  <ul class="shop">
+		  	<li>
+			  <div class="shop-img s1"></div>
+				<div class="shop-body">
+					<h5 class="shop-tit">匈牙利嫩烤松阪豬</h5>
+					<span class="fred fw">NT$115/份</span>
+					<p class="count">
+						<span class="min c">-</span>
+						<input type="text" class="num alignc" value="0">
+						<span class="add c">+</span>
+					</p>
+					<button type="button" class="btn btn-dark shop-btn">加入購物車</button>
+				</div>
+		    </li>
+			  <li>
+			  <div class="shop-img s2"></div>
+				<div class="shop-body">
+					<h5 class="shop-tit">香蒜黑椒巴沙魚</h5>
+					<span class="fred fw">NT$99/份</span>
+					<p class="count">
+						<span class="min c">-</span>
+						<input type="text" class="num alignc" value="0">
+						<span class="add c">+</span>
+					</p>
+					<button type="button" class="btn btn-dark shop-btn">加入購物車</button>
+				</div>
+			  </li>
+			  <li>
+			  <div class="shop-img s3"></div>
+				<div class="shop-body">
+					<h5 class="shop-tit">蒜香椒鹽牛五花</h5>
+					<span class="fred fw">NT$99/份</span>
+					<p class="count">
+						<span class="min c">-</span>
+						<input type="text" class="num alignc" value="0">
+						<span class="add c">+</span>
+					</p>
+					<button type="button" class="btn btn-dark shop-btn">加入購物車</button>
+				</div>
+			  </li>
+			  <li>
+			  <div class="shop-img s4"></div>
+				<div class="shop-body">
+					<h5 class="shop-tit">舒肥熟成菲力牛</h5>
+					<span class="fred fw">NT$139/份</span>
+					<p class="count">
+						<span class="min c">-</span>
+						<input type="text" class="num alignc" value="0">
+						<span class="add c">+</span>
+					</p>
+					<button type="button" class="btn btn-dark shop-btn">加入購物車</button>
+				</div>
+			  </li>
+		  </ul>
+      </div>
+    </section>	  
+	  
+	  <div class="car alignc">
+	  	<div class="car-tit">
+		  <h3 class="ffff">購物車</h3>
+			<button type="button" class="close" id="car-close">&times;</button>
+	    </div>
+		  
+		  <div class="car-body">
+		  	<div class="container">
+			  <div class="title">
+			  	<div class="title-3">商品訂購</div>
+				  <div class="title-1">CART</div>
+			  </div>
+				
+				<div class="car-p">1.匈牙利嫩烤松阪豬　<span class="disnum fred fw">0</span>份</div><br>
+				<div class="car-p">2.香蒜黑椒巴沙魚　　<span class="disnum fred fw">0</span>份</div><br>
+				<div class="car-p">3.蒜香椒鹽牛五花　　<span class="disnum fred fw">0</span>份</div><br>
+				<div class="car-p">4.舒肥熟成菲力牛　　<span class="disnum fred fw">0</span>份</div><br>
+				<br>
+				<div class="car-p">運費　　　　　　<span class="fred fw">30</span>元整</div><br>
+				<hr>
+				<button type="button" class="btn btn-danger" id="car-btn">結帳</button>
+		    </div>
+		  </div>
+	  </div>
+	  
+	  <div class="modal fade" tabindex="-1" id="car-box">
+	  	<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1>訂購完成</h1>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+		    </div>
+			  
+			  <div class="modal-body">
+				  您一共下訂<span id="carnum" class="fred fw">0</span>份餐點<br>
+				  含運費總共<span id="carnum2" class="fred fw">0</span>元整<br>
+				  <br>
+				  請於3日內完成匯款，並於客服機器人或客服系統，以及相關聯絡方式提供我們您的姓名、信箱、地址等資訊，謝謝。<br>
+				  <br>
+				  匯款帳戶: <span class="fred fw">B040B040B040</span><br>
+				  疫情時期請各位務必戴上口罩，保護自己和家人的健康，以及共同守護全人民的健康，謝謝您的配合。<br>
+				  <span class="fdark fw">-你訂NIDIN團隊上。</span>
+			  </div>
+			  
+			  <div class="modal-footer">
+			  <button type="button" class="btn btn-dark" data-dismiss="modal" id="send">關閉</button>
+			  </div>
+		  </div>
+	    </div>
+	  </div>
+	  
+	  <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-12 alignc">
+			  <div class="report">
+			  	<h1>已銷售統計數量<span class="fred fw">New</span></h1>
+				  <hr>
+				  <div class="modal-body" id="show-list">
+				  	<ul class="list">
+					  <li>
+						<span class="list-rate">0%</span>
+						  <span class="list-tit">商品1</span>
+					  </li>
+						<li>
+						<span class="list-rate">0%</span>
+						  <span class="list-tit">商品2</span>
+						</li>
+						<li>
+						<span class="list-rate">0%</span>
+						  <span class="list-tit">商品3</span>
+						</li>
+						<li>
+						<span class="list-rate">0%</span>
+						  <span class="list-tit">商品4</span>
+						</li>
+				    </ul>
+				  </div>
+				  <div id="show-report"></div>
+			  </div>
+          </div>
+			
+			<div class="col-lg-6 col-md-6 col-12 alignc">
+			  <div class="report">
+			  	<h1>客戶服務紀錄<span class="fred fw">Hot</span></h1>
+				  <hr>
+				  <h3>總計: <span id="p" class="fred fw">0</span>篇</h3>
+				  <div id="show-report2"></div>
+			  </div>
+          </div>
+        </div>
+      </div>
+<!--==================================================================================	  -->		
+	  <section id="page5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-12">
+			  <div class="title">
+			  	<div class="title-c">服務中心</div>
+				  <div class="title-e">SERVICE</div>
+				  <h3 class="fdark fw">我們用最真誠的心，提供您最好的服務。</h3>
+			  </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	  	
+	<section id="page5-footer" class="alignc">
+    <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-12 box">
+              <span class="glyphicon glyphicon-headphones fred f100"></span>
+              <hr>
+              <p><span class="glyphicon glyphicon-earphone"></span>客服專線：０８００－５８０－５８０</p>
+			  <p><span class="glyphicon glyphicon-home"></span>地址：台中市豐原區幸福路１００號</p>
+            </div>         
+			  <div class="col-lg-4 col-12 box">
+              <span class="glyphicon glyphicon-bookmark fred f100"></span>
+              <hr>
+              <p><img src="images/robot0.png" alt="" class="robots">客服機器人討論訊息不漏接</p>
+			  <p><span class="glyphicon glyphicon-stats"></span><a href="#page4" class="aw">銷售統計</a>快速分析熱門商品</p>
+            </div>         
+		    <div class="col-lg-4 col-12 box">
+              <span class="glyphicon glyphicon-qrcode fred f100"></span>
+              <hr>
+              <p><span class="glyphicon glyphicon-user"></span>專人：LINE ID-@250zzgdi</p>
+			  <p><span class="glyphicon glyphicon-globe"></span>加入<a href="" class="aw" data-toggle="modal" data-target="#sebox">粉絲專頁</a>，最新消息都在這</p>
+            </div>         
+      </div>
+    </div>
+	</section>		
+<!--==================================================================================	  -->
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>本站使用 CSS + jQuery，響應 RWD 與 AJAX 設計 © 2020 - 你訂NIDIN　<a href="mailto:B040@gmail.com" class="aw glyphicon glyphicon-envelope"></a>　<a href="javascript:print();" class="aw glyphicon glyphicon-print"></a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/index.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.0.0.js"></script>
+</body>
+</html>	
